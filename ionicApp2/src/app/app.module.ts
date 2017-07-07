@@ -1,3 +1,4 @@
+import { About } from './../pages/about/about';
 import { LifecycleEvents } from './../pages/lifecycle-events/lifecycle-events';
 import { Contacts } from './../pages/contacts/contacts';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +12,7 @@ import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
+    About,
     Contacts,
     LifecycleEvents,
     MyApp,
@@ -22,6 +24,7 @@ import { HomePage } from '../pages/home/home';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    About,
     Contacts,
     LifecycleEvents,
     MyApp,

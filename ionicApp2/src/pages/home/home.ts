@@ -1,3 +1,4 @@
+import { About } from './../about/about';
 import { LifecycleEvents } from './../lifecycle-events/lifecycle-events';
 import { Contacts } from './../contacts/contacts';
 import { Component } from '@angular/core';
@@ -33,5 +34,9 @@ export class HomePage {
       }).catch(error => {
         console.log('Mensagem de erro', error);
       })
+    }
+
+    onPush(): void{
+      this.navCtrl.push(About);
     }
 }

@@ -1,4 +1,3 @@
-import { Contacts } from './../pages/contacts/contacts';
 import { Component, ViewChild} from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
