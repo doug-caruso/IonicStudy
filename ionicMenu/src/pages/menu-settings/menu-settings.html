@@ -1,15 +1,11 @@
 <ion-header>
-
-  <ion-navbar>
-    <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Menu Settings</ion-title>
-  </ion-navbar>
-
+  <custom-header [title]="'Menu Settings'"></custom-header>
 </ion-header>
 
 
 <ion-content padding>
+
+  <button ion-button block (click)="toggleMenu1Enable()"> Toggle Menu 1 </button>
+  <button ion-button block (click)="menuConfigs()"> Menu Configs </button>
 
 </ion-content>

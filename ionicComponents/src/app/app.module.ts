@@ -1,6 +1,3 @@
-import { CustomHeader } from './../components/custom-header/custom-header';
-import { MenuSettings } from './../pages/menu-settings/menu-settings';
-import { About } from './../pages/about/about';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -12,26 +9,15 @@ import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
-    About,
-    CustomHeader,
-    MenuSettings,
     MyApp,
     HomePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp, {
-      platforms: {
-        ios: {menuType: 'reveal'},
-        android: {menuType: 'overlay'},
-        windows: {menuType: 'push'}
-      }
-    })
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    About,
-    MenuSettings,
     MyApp,
     HomePage
   ],
