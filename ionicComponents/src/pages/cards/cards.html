@@ -3,6 +3,176 @@
 </ion-header>>
 
 
-<ion-content padding>
+<ion-content padding class="cards-bg">
 
+  <h1>Cards</h1>
+
+  <h2>Basic</h2>
+  <ion-card>
+    <ion-card-content>
+      Card Content
+    </ion-card-content>
+  </ion-card>
+
+  <h2>Header</h2>
+  <ion-card>
+    <ion-card-header>
+      Card Header
+    </ion-card-header>
+    <ion-card-content>
+      Card Content
+    </ion-card-content>
+  </ion-card>
+
+  <h2>Lists</h2>
+  <ion-card>
+
+    <ion-card-header>
+      Explore
+    </ion-card-header>
+
+      <ion-list>
+        <button ion-item icon-left>
+          <ion-icon name="cart"></ion-icon>
+          Shopping
+        </button>
+
+        <button ion-item icon-left>
+          <ion-icon name="cafe"></ion-icon>
+          Coffe
+        </button>
+
+        <button ion-item icon-left>
+          <ion-icon name="planet"></ion-icon>
+          Space
+        </button>
+
+      </ion-list>
+  </ion-card>
+
+  <h2>Card Images</h2>
+  <ion-card>
+
+    <img src="assets/images/arto.jpg">
+
+    <ion-card-content>
+      <ion-card-title>My Favorite Wallpapers</ion-card-title>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ducimus officiis reprehenderit voluptatibus, itaque saepe incidunt, veniam repudiandae nobis? Fuga incidunt, harum voluptatibus. Cupiditate reprehenderit est nobis exercitationem dolore tempora asperiores delectus, fugiat, magnam ullam?</p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="primary" icon-left>
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+      <ion-col text-center>
+        <button ion-button clear small color="primary" icon-left>
+          <ion-icon name="musical-notes"></ion-icon>
+          Musical
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="primary" icon-left>
+          <ion-icon name="share-alt"></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+  <h2>Background Images</h2>
+  <div class="custom-cards">
+     <ion-card>
+    <img src="assets/images/arto.jpg">
+    <div class="card-title">Arto</div>
+    <div class="card-subtitle">First Image</div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/images/jamie.jpg">
+      <div class="card-title">Jamie</div>
+      <div class="card-subtitle">New Image</div>
+    </ion-card>
+  </div>
+
+  <h2>Advanced Cards</h2>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/images/avatar.jpg">
+      </ion-avatar>
+      <h2>Iron Man</h2>
+      <p>Tony Stark</p>
+    </ion-item>
+
+    <img src="assets/images/iron-man.jpg">
+    <ion-card-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus provident mollitia numquam cum repudiandae voluptates fugit quam magni odit, minus, hic nulla ratione obcaecati, animi quos aperiam dolorem in quidem consequatur repellat? Culpa, modi. Eaque esse consequuntur quas molestiae, minima, magnam id nobis, maxime, voluptatum vel praesentium ipsa ipsam rerum?</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button clear small icon-left>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>12k likes</div>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button clear small icon-left>
+          <ion-icon name="text"></ion-icon>
+          <div>4 comments</div>
+        </button>
+      </ion-col>
+
+      <ion-col text-center center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <h2>Card Maps</h2>
+    <div class="map-cards">
+      <ion-card>
+        <div>
+          <img src="assets/images/map.jpg">
+
+          <ion-fab top right>
+            <button ion-fab class="fab-map">
+              <ion-icon name="pin"></ion-icon>
+            </button>
+          </ion-fab>
+        </div>
+
+        <ion-item>
+          <ion-icon name="football" item-left large></ion-icon>
+          <h2>Museum of Football</h2>
+          <p>Way Street, Madison, 32893</p>
+        </ion-item>
+        
+        <ion-item>
+          <ion-icon name="wine" item-left large></ion-icon>
+          <h2>Institute of Fine Cocktails</h2>
+          <p>Way Street, Madison, 32893</p>
+        </ion-item>
+
+        <ion-item action>
+          <span item-left class="item-bold">18min</span>
+          <span item-left>3.0km</span>
+          <button ion-button icon-left clear item-right>
+            <ion-icon name="navigate"></ion-icon>
+            Start
+          </button>
+        </ion-item>
+      </ion-card>
+    </div>
 </ion-content>
