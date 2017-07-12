@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle="menu1" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <button ion-button icon-only menuToggle="menu2" end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button icon-only menuToggle="menu3" end>
+      <ion-icon name="home"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+
+  <button ion-button block (click)="onAbout()">About Page</button>
+  <button ion-button block (click)="onSettings()" color="danger">Settings Page</button>
+</ion-content>
