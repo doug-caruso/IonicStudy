@@ -1,0 +1,107 @@
+<ion-header>
+  <custom-header [title]="'Buttons'"></custom-header>
+</ion-header>
+
+
+<ion-content padding>
+  <h1>Buttons</h1>
+  
+  <h2>Básico</h2>
+  <button ion-button>Ionic</button>
+
+  <h2>Colors</h2>
+  <button ion-button color="primary">Butão</button>
+  <button ion-button color="secondary">Butão</button>
+  <button ion-button color="danger">Butão</button>
+  <button ion-button color="light">Butão</button>
+  <button ion-button color="dark">Butão</button>
+
+  <h2>Outline</h2>
+  <button ion-button outline color="danger">Butão</button>
+  <button ion-button outline color="light">Butão</button>
+  <button ion-button outline color="dark">Butão</button>
+
+  <h2>Clear</h2>
+  <button ion-button clear color="danger">Butão</button>
+  <button ion-button clear color="light">Butão</button>
+  <button ion-button clear color="dark">Butão</button>  
+
+  <h2>Round</h2>
+  <button ion-button round color="danger">Butão</button>
+  <button ion-button round color="light">Butão</button>
+  <button ion-button round color="dark">Butão</button>
+
+  <h2>Block</h2>
+  <button ion-button block color="danger">Butão</button>
+  <button ion-button block color="light">Butão</button>
+  <button ion-button block color="dark">Butão</button>
+
+  <h2>Full</h2>
+  <button ion-button full color="danger">Butão</button>
+  <button ion-button full color="light">Butão</button>
+  <button ion-button full color="dark">Butão</button>
+
+  <h2>Sizes</h2>
+  <button ion-button  color="danger" small>Small</button>
+  <button ion-button  color="light">Default</button>
+  <button ion-button  color="dark" large>Large</button>
+
+  <h2>Icons</h2>
+  <button ion-button icon-left>
+    <ion-icon name="arrow-back"></ion-icon>
+    Back
+  </button>
+  <button ion-button icon-only>
+    <ion-icon name="home"></ion-icon>
+  </button>
+  <button ion-button icon-right>
+   Next
+   <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+
+  <h2>Modes</h2>
+  <button ion-button mode="md" color="danger">Android</button>
+  <button ion-button mode="ios" color="light">iOS</button>
+  <button ion-button mode="wp" color="dark">Windows</button>
+  
+  <h2>Modes</h2>
+  <button ion-button [color]="myColor">Android</button>
+  <button ion-button [color]="isDanger ? 'danger' : 'primary'">iOS</button>
+  <button ion-button [round]="isRound">Windows</button>
+  <button ion-button [round]="isClear">Windows</button>
+  <button ion-button (click)="onClick($event)">Click</button>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only color="danger">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end left>
+      <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only color="secondary">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
