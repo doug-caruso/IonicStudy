@@ -1,3 +1,6 @@
+import { Auth } from './../../providers/auth';
+import { FirebaseAuthState } from 'angularfire2';
+import { UserModel } from './../../models/user.model';
 import { User } from './../../providers/user';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -19,10 +22,11 @@ export class Signup {
   signupForm: FormGroup;
 
   constructor(
+    public authService: Auth,
     public formBuilder: FormBuilder,
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public User: User
+    public userService: User
     ) {
 
       let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -37,11 +41,23 @@ export class Signup {
 
 
   onSubmit(){
-    this.User.create(this.signupForm.value)
+
+    let formUser = this.signupForm.value;
+
+    this.authService.createAuthUser({
+      email: formUser.email,
+      password: formUser.password
+    }).then((authState: FirebaseAuthState) =>{
+
+      delete formUser.password;
+      formUser.uid = authState.auth.uid;
+
+      this.userService.create(formUser)
       .then(() => {
         console.log("Usuario cadastrado");
-        
       })
+
+    })
   }
 
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { AngularFire } from "angularfire2";
+import { AngularFire, FirebaseListObservable } from "angularfire2";
 import { UserModel } from './../models/user.model'
 
 /*
@@ -13,13 +13,18 @@ import { UserModel } from './../models/user.model'
 @Injectable()
 export class User {
 
+  users: FirebaseListObservable<UserModel[]>
+
   constructor(
     public af: AngularFire,
-    public http: Http) {
+    public http: Http
+    ) {
+      this.users = this.af.database.list('/users')
   }
 
-  create(user: UserModel): firebase.Promise<void>{
-    return this.af.database.list('/users').push(user);
+  create(user: UserModel): any {
+    return this.af.database.object(`/users/${user.uid}`)
+    .set(user);
   }
 
 }
